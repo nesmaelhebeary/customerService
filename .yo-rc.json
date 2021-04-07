@@ -40,7 +40,9 @@
     "pages": [],
     "creationTimestamp": 1617784545491,
     "jwtSecretKey": "YTYxMzI4NTE3YWEwZDA0OTU4ZWJlMDc1ZDg5NGIyNmQ0ZTk1NzU5Y2VjYmU4MDBkOTUyMDYyZTJjOTRkNjEzZTUyNGViNjVhYWYyMGVhNDIyNjc4ZGQ0YmI0YTcyZGNiMDA0NjUxZWU1NTU4ZjhkNzMwYTM3MTQ5NzFiYWY2NjE=",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Customer", "Claim"],
+    "lastLiquibaseTimestamp": 1617784652000
   },
   "git-provider": "GitHub",
   "git-company": "nesmaelhebeary",

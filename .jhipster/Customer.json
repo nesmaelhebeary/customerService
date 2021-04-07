@@ -1,0 +1,79 @@
+{
+  "name": "Customer",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "companyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactDial",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "CustomerStatus",
+      "fieldValues": "New,Active,InActive"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "groupName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "activity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taxId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "commercialRegisteryId",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "claim",
+      "otherEntityRelationshipName": "customerId",
+      "relationshipName": "id"
+    }
+  ],
+  "entityTableName": "customer",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "customerService",
+  "clientRootFolder": "customerService",
+  "databaseType": "sql",
+  "changelogDate": "20210407083731"
+}

@@ -46,6 +46,9 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.hypercell.customerservice.domain.Customer.class.getName());
+            createCache(cm, com.hypercell.customerservice.domain.Customer.class.getName() + ".ids");
+            createCache(cm, com.hypercell.customerservice.domain.Claim.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

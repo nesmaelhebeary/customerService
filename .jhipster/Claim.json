@@ -1,0 +1,79 @@
+{
+  "name": "Claim",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "accidentDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "claimType",
+      "fieldType": "ClaimType",
+      "fieldValues": "Internal,External"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lineOfBusiness",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "paid",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "outstanding",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "claimAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "commulative",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "id",
+      "relationshipName": "customerId"
+    }
+  ],
+  "entityTableName": "claim",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "customerService",
+  "clientRootFolder": "customerService",
+  "databaseType": "sql",
+  "changelogDate": "20210407083732"
+}
