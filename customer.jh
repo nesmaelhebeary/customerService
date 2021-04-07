@@ -1,0 +1,50 @@
+entity Customer {
+    id Long,
+    companyName String,
+    contactName String,
+    contactDial String,
+    contactEmail String,
+    createdDate LocalDate,
+    status CustomerStatus,
+    createdBy String,
+    groupName String,
+    activity String,
+    address String,
+    taxId String,
+    commercialRegisteryId String
+}
+
+
+entity Claim {
+    id Long,
+    description String,
+    customerId Long,
+    accidentDate LocalDate,
+    createdDate LocalDate,
+    claimType ClaimType,
+    createdBy String,
+    lineOfBusiness Long,
+    productId Long,
+    paid Double,
+    outstanding Double,
+    claimAmount Double,
+     commulative Boolean
+}
+
+
+enum CustomerStatus{
+New, Active, InActive
+}
+
+enum ClaimType{
+Internal , External
+}
+
+relationship OneToMany {
+  Customer {id} to Claim{customerId}
+}
+
+
+
+
+  
